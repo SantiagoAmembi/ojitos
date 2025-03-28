@@ -5,19 +5,22 @@ body {
   height: 100vh;
   margin: 0;
   background: #000;
-  font-family: 'Courier New', monospace; /* Estilo tipo terminal */
+  font-family: 'Courier New', monospace;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .counter {
   font-size: 3.5rem;
   font-weight: bold;
-  color: #39FF14; /* Verde neon */
+  color: #39FF14;
   text-shadow: 0 0 10px #39FF14;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .counter.fiesta {
-  color: #FF10F0; /* Rosa neon al llegar a cero */
+  color: #FF10F0;
   text-shadow: 0 0 15px #FF10F0;
   animation: pulse 0.5s infinite alternate;
 }
@@ -25,4 +28,14 @@ body {
 @keyframes pulse {
   from { opacity: 1; }
   to { opacity: 0.7; }
+}
+
+@media (max-width: 600px) {
+  .counter {
+    font-size: 2rem;
+  }
+  
+  .counter.fiesta {
+    font-size: 1.5rem;
+  }
 }
