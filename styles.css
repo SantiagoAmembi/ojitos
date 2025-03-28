@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #000;
+  font-family: 'Courier New', monospace; /* Estilo tipo terminal */
+}
+
+.counter {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #39FF14; /* Verde neon */
+  text-shadow: 0 0 10px #39FF14;
+  letter-spacing: 2px;
+}
+
+.counter.fiesta {
+  color: #FF10F0; /* Rosa neon al llegar a cero */
+  text-shadow: 0 0 15px #FF10F0;
+  animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from { opacity: 1; }
+  to { opacity: 0.7; }
+}
